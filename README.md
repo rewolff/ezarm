@@ -12,21 +12,21 @@ each CPU. This is the situation I want to move away from.
 
 The blinky program should be as simple as: 
 
-#include <ezarm/clock.h>
-#include <ezarm/gpio.h>
-#include <ezarm/delay.h>
+ #include <ezarm/clock.h>
+ #include <ezarm/gpio.h>
+ #include <ezarm/delay.h>
 
-#define LED PB2
+ #define LED PB2
 
-main () 
-{
-  eza_clock_init (EZA_CLK_MAX);
-  eza_gpio_set_pinmode (LED, EZA_GPIO_OUTPUT);
-  while (1) {
-    eza_gpio_toggle (LED);
-    eza_delay_ms (300);
-  }
-}
+ main () 
+ {
+   eza_clock_init (EZA_CLK_MAX);
+   eza_gpio_set_pinmode (LED, EZA_GPIO_OUTPUT);
+   while (1) {
+     eza_gpio_toggle (LED);
+     eza_delay_ms (300);
+   }
+ }
 
 This should compile into a working program on all six boards. 
 
