@@ -11,7 +11,7 @@ line program with 8 #if statements to do things differently for
 each CPU. This is the situation I want to move away from. 
 
 The blinky program should be as simple as: 
-
+```
  #include <ezarm/clock.h>
  #include <ezarm/gpio.h>
  #include <ezarm/delay.h>
@@ -27,7 +27,7 @@ The blinky program should be as simple as:
      eza_delay_ms (300);
    }
  }
-
+```
 This should compile into a working program on all six boards. 
 
 Now, some processors have advanced features that others don't have. 
